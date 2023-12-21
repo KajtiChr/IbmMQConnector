@@ -1,4 +1,4 @@
-package pl.chrzanowski.springcamel.utils;
+package pl.chrzanowski.springcamel.exceptionHandling;
 
 public class ErrorMessageImpl {
 
@@ -18,13 +18,13 @@ public class ErrorMessageImpl {
 
     private static final String ERR_03 = "Validator is equal null";
 
-    public static final ErrorMessage VALL_ERROR;
+    public static final ErrorMessage NULL_VALLIDATOR;
 
     static{
         SUCCESS = new ErrorMessage(nullMessImpl, ERR_00, 00);
         VALIDATOR = new ErrorMessage(nullMessImpl, ERR_01, 01);
         EMPTY_MESS = new ErrorMessage(nullMessImpl, ERR_02, 02);
-        VALL_ERROR = new ErrorMessage(nullMessImpl, ERR_03, 03);
+        NULL_VALLIDATOR = new ErrorMessage(nullMessImpl, ERR_03, 03);
     }
 
 

@@ -1,4 +1,4 @@
-package pl.chrzanowski.springcamel.utils;
+package pl.chrzanowski.springcamel.exceptionHandling;
 
 import java.text.DecimalFormat;
 

@@ -15,4 +15,11 @@ public class InfoMessage {
     public static InfoMessage createMessage(String mess){
        return new InfoMessage(mess);
     }
+
+    @Override
+    public String toString() {
+        return "InfoMessage{" +
+                "message='" + message + '\'' +
+                '}';
+    }
 }
