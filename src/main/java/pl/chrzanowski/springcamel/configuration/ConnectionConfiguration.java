@@ -17,7 +17,7 @@ public class ConnectionConfiguration {
     public MQConnectionFactory mqConnectiontionFactory() throws JMSException {
         MQConnectionFactory mq = new MQConnectionFactory();
         mq.setAppName("demoTest");
-        mq.setHostName("localhost");
+        mq.setHostName("host.docker.internal");
         mq.setPort(1414);
         mq.setChannel("DEV.APP.SVRCONN");
         mq.setQueueManager("QM1");
