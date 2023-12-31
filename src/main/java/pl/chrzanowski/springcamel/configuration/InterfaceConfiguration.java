@@ -1,5 +1,8 @@
 package pl.chrzanowski.springcamel.configuration;
 
+import com.codahale.metrics.Meter;
+import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.health.HealthCheckRegistry;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import pl.chrzanowski.springcamel.utils.ConnectorConfiguration;
@@ -26,5 +29,22 @@ public class InterfaceConfiguration {
     public InfoMessage infoMessage(){
         return InfoMessage.createMessageFor3NumInterace();
     }
+
+    @Bean("meter")
+    public Meter meter(){
+        return new Meter();
+    }
+    @Bean
+    public MetricRegistry metricRegistry(){
+       MetricRegistry  metricRegistry = new MetricRegistry();
+        metricRegistry.register("error", meter());
+        return metricRegistry;
+    }
+
+
+
+
+
+
 
 }

@@ -13,9 +13,6 @@ public class SpringCamelApplication {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SpringCamelApplication.class, args);
-//        CamelContext camelContext = new DefaultCamelContext();
-//
-//        camelContext.start();
     }
 
 }
